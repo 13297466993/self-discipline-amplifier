@@ -1,0 +1,28 @@
+# ---------- 开发期临时产物 ----------
+# _ 开头的是本地自检 / 回归 / 截图脚本与一次性补丁，不进仓库
+_*.js
+_*.py
+_*.html
+
+# 布局体检每次运行都会重新生成的诊断页（体积很大）
+preview/_tmp/
+preview/_diag_*.html
+
+# 设计参考图（来自 zenofthinking.com / skillsmp.com，非本应用产物）
+preview/ref-*.png
+
+# 旧的整页截图存档，已被 screenshots/ 取代
+preview/
+
+# ---------- 构建脚本与中间资源 ----------
+# 只保留最终成果 index.html，构建过程不进仓库
+assets/*.py
+assets/_*.js
+assets/*-backup.html
+assets/art-src/
+assets/preview/
+
+# ---------- 系统 ----------
+.DS_Store
+Thumbs.db
+desktop.ini

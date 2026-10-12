@@ -1,0 +1,418 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+<!--
+  自律放大器 · 矢量图标与插画集
+  用法：<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><use href="icons.svg#i-today"/></svg>
+  主笔触 = 品牌渐变（跟随 acc / acc2 两个 CSS 变量，没定义时用兜底色），副笔触 = currentColor（跟随文字色）
+  渐变一律用 userSpaceOnUse：objectBoundingBox 会让水平/垂直线段的包围盒退化成零高宽，线条整个不渲染
+-->
+<defs>
+  <!-- 24×24 图标用 -->
+  <linearGradient id="ga" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="24" y2="24">
+    <stop offset="0" style="stop-color:var(--acc,#4a5bd8)"/>
+    <stop offset="1" style="stop-color:var(--acc2,#1f9fb8)"/>
+  </linearGradient>
+  <linearGradient id="gb" gradientUnits="userSpaceOnUse" x1="24" y1="0" x2="0" y2="24">
+    <stop offset="0" style="stop-color:var(--acc2,#1f9fb8)"/>
+    <stop offset="1" style="stop-color:var(--acc,#4a5bd8)"/>
+  </linearGradient>
+  <linearGradient id="gf" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="24">
+    <stop offset="0" style="stop-color:var(--acc,#4a5bd8);stop-opacity:.92"/>
+    <stop offset="1" style="stop-color:var(--acc2,#1f9fb8);stop-opacity:.5"/>
+  </linearGradient>
+  <linearGradient id="gs" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="24" y2="24">
+    <stop offset="0" style="stop-color:var(--acc,#4a5bd8);stop-opacity:.2"/>
+    <stop offset="1" style="stop-color:var(--acc2,#1f9fb8);stop-opacity:.03"/>
+  </linearGradient>
+
+  <!-- 200×140 插画用 -->
+  <linearGradient id="gL" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="200" y2="140">
+    <stop offset="0" style="stop-color:var(--acc,#4a5bd8)"/>
+    <stop offset="1" style="stop-color:var(--acc2,#1f9fb8)"/>
+  </linearGradient>
+  <linearGradient id="gL2" gradientUnits="userSpaceOnUse" x1="200" y1="0" x2="0" y2="140">
+    <stop offset="0" style="stop-color:var(--acc2,#1f9fb8)"/>
+    <stop offset="1" style="stop-color:var(--acc,#4a5bd8)"/>
+  </linearGradient>
+  <linearGradient id="gLf" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="140">
+    <stop offset="0" style="stop-color:var(--acc,#4a5bd8);stop-opacity:.92"/>
+    <stop offset="1" style="stop-color:var(--acc2,#1f9fb8);stop-opacity:.5"/>
+  </linearGradient>
+  <linearGradient id="gLs" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="200" y2="140">
+    <stop offset="0" style="stop-color:var(--acc,#4a5bd8);stop-opacity:.2"/>
+    <stop offset="1" style="stop-color:var(--acc2,#1f9fb8);stop-opacity:.03"/>
+  </linearGradient>
+</defs>
+
+<!-- ============ 导航与全局 ============ -->
+<symbol id="i-today" data-g="nav" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>每日行事</title>
+  <rect x="3.5" y="5" width="17" height="15.5" rx="3" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M8 3v3.6M16 3v3.6" stroke="currentColor" stroke-width="1.6" opacity=".45"/>
+  <path d="M8.2 13.6l2.2 2.2 4.4-4.7" stroke="url(#gb)" stroke-width="1.9"/>
+</symbol>
+
+<symbol id="i-library" data-g="nav" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>思维模型库</title>
+  <path d="M12 3.4l8 4.3-8 4.3-8-4.3z" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M4 12.2l8 4.3 8-4.3" stroke="url(#gb)" stroke-width="1.75"/>
+  <path d="M4 16.6l8 4.3 8-4.3" stroke="currentColor" stroke-width="1.6" opacity=".42"/>
+</symbol>
+
+<symbol id="i-settings" data-g="nav" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>设置</title>
+  <path d="M4 7.5h9M19 7.5h1" stroke="url(#ga)" stroke-width="1.75"/>
+  <circle cx="15.2" cy="7.5" r="2.3" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M4 16.5h3.5M13.5 16.5h6.5" stroke="url(#gb)" stroke-width="1.75"/>
+  <circle cx="9.5" cy="16.5" r="2.3" stroke="url(#gb)" stroke-width="1.75"/>
+</symbol>
+
+<symbol id="i-theme" data-g="nav" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>主题切换</title>
+  <path d="M20.2 14.6A8.6 8.6 0 0 1 9.4 3.8a8.6 8.6 0 1 0 10.8 10.8z" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M17.4 3.2l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z" stroke="url(#gb)" stroke-width="1.2"/>
+</symbol>
+
+<symbol id="i-search" data-g="nav" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>搜索</title>
+  <circle cx="10.6" cy="10.6" r="6.3" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M15.3 15.3l4.4 4.4" stroke="url(#gb)" stroke-width="1.9"/>
+</symbol>
+
+<symbol id="i-close" data-g="nav" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>关闭</title>
+  <path d="M6.4 6.4l11.2 11.2M17.6 6.4L6.4 17.6" stroke="url(#ga)" stroke-width="1.85"/>
+</symbol>
+
+<!-- ============ 三步向导 ============ -->
+<symbol id="i-step1" data-g="step" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>目标分解 · 逐层拆解</title>
+  <rect x="3.6" y="15.4" width="16.8" height="4.6" rx="1.6" stroke="url(#ga)" stroke-width="1.75"/>
+  <rect x="5.4" y="10.2" width="13.2" height="4.6" rx="1.6" stroke="url(#gb)" stroke-width="1.75"/>
+  <rect x="7.4" y="5" width="9.2" height="4.6" rx="1.6" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M9.9 2.6v.9M14.1 2.6v.9" stroke="currentColor" stroke-width="1.5" opacity=".45"/>
+</symbol>
+
+<symbol id="i-step2" data-g="step" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>优先级排序 · 四象限</title>
+  <rect x="3.4" y="3.4" width="17.2" height="17.2" rx="2.6" stroke="currentColor" stroke-width="1.5" opacity=".42"/>
+  <path d="M12 3.6v16.8M3.6 12h16.8" stroke="url(#ga)" stroke-width="1.75"/>
+  <circle cx="7.9" cy="7.9" r="1.9" fill="url(#ga)" stroke="none"/>
+  <circle cx="16.1" cy="16.1" r="1.5" fill="url(#gb)" stroke="none"/>
+</symbol>
+
+<symbol id="i-step3" data-g="step" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>今日时间块</title>
+  <circle cx="12" cy="10.4" r="7" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M12 6.6v4l3.2 2.1" stroke="url(#gb)" stroke-width="1.75"/>
+  <rect x="6.6" y="18.4" width="10.8" height="2.8" rx="1.4" stroke="url(#ga)" stroke-width="1.75"/>
+</symbol>
+
+<!-- ============ 积木五层 ============ -->
+<symbol id="i-brick-text" data-g="brick" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>这件事到底是什么</title>
+  <rect x="3.4" y="6" width="17.2" height="12" rx="2.6" stroke="currentColor" stroke-width="1.5" opacity=".42"/>
+  <path d="M6.8 10.4h7.2" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M6.8 14.2h9.6" stroke="url(#gb)" stroke-width="1.75"/>
+  <path d="M15.6 9.2v2.6" stroke="url(#ga)" stroke-width="1.9"/>
+</symbol>
+
+<symbol id="i-brick-basis" data-g="brick" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>基本命题 · 地基</title>
+  <path d="M3.6 19.4h16.8" stroke="url(#ga)" stroke-width="2.1"/>
+  <path d="M12 19.4V9.6" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M8 13.2l4-4 4 4" stroke="url(#gb)" stroke-width="1.75"/>
+  <path d="M9.4 6.6h5.2" stroke="currentColor" stroke-width="1.5" opacity=".45"/>
+</symbol>
+
+<symbol id="i-brick-target" data-g="brick" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>可验证的小目标</title>
+  <rect x="3.6" y="3.6" width="16.8" height="16.8" rx="3.4" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M8.2 12.2l2.8 2.8 5-5.4" stroke="url(#gb)" stroke-width="2"/>
+</symbol>
+
+<symbol id="i-brick-gap" data-g="brick" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>缺口 · 缺什么</title>
+  <path d="M3.4 12h5.6M15 12h5.6" stroke="url(#ga)" stroke-width="2"/>
+  <path d="M12 8.6v6.8" stroke="currentColor" stroke-width="1.5" opacity=".5" stroke-dasharray="2 2.6"/>
+  <path d="M9.6 8.2l-1.4-2.2M14.4 8.2l1.4-2.2" stroke="url(#gb)" stroke-width="1.6"/>
+</symbol>
+
+<symbol id="i-brick-action" data-g="brick" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>第一步动作</title>
+  <path d="M4.6 19.4h6.2" stroke="currentColor" stroke-width="1.6" opacity=".42"/>
+  <path d="M6.2 19.4l4.6-8.6" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M11.4 4.4h8.2v8.2" stroke="url(#gb)" stroke-width="1.9"/>
+  <path d="M19.6 4.4L11 13" stroke="url(#ga)" stroke-width="1.9"/>
+</symbol>
+
+<!-- ============ 四象限 ============ -->
+<symbol id="i-q1" data-g="quad" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>重要且紧急 · 立刻做</title>
+  <path d="M13.4 3.2L6.6 13.4h4.4L10 20.8l7.4-10.6h-4.6z" stroke="url(#ga)" stroke-width="1.75"/>
+</symbol>
+
+<symbol id="i-q2" data-g="quad" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>重要不紧急 · 排进日程</title>
+  <path d="M12 20.4v-7.2" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M12 13.4c-3.1 0-4.7-1.9-4.7-4.4 2.7 0 4.7 1.7 4.7 4.4z" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M12 13.4c3.1 0 4.7-1.9 4.7-4.4-2.7 0-4.7 1.7-4.7 4.4z" stroke="url(#gb)" stroke-width="1.75"/>
+</symbol>
+
+<symbol id="i-q3" data-g="quad" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>紧急不重要 · 委托出去</title>
+  <path d="M3.4 12h8.4" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M8.6 8.9l3.2 3.1-3.2 3.1" stroke="url(#ga)" stroke-width="1.75"/>
+  <rect x="14.6" y="8.4" width="6" height="7.2" rx="1.8" stroke="url(#gb)" stroke-width="1.75"/>
+</symbol>
+
+<symbol id="i-q4" data-g="quad" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>不重要不紧急 · 写下来不做</title>
+  <circle cx="12" cy="12" r="8.2" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M7.4 16.6l9.2-9.2" stroke="url(#gb)" stroke-width="1.9"/>
+</symbol>
+
+<!-- ============ 知识库九分类 ============ -->
+<symbol id="i-cat-goal" data-g="cat" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>目标与拆解</title>
+  <circle cx="9.6" cy="9.6" r="6.3" stroke="url(#ga)" stroke-width="1.75"/>
+  <circle cx="9.6" cy="9.6" r="2.4" stroke="url(#gb)" stroke-width="1.6"/>
+  <path d="M14.4 14.4L20.2 20.2" stroke="url(#ga)" stroke-width="1.9"/>
+</symbol>
+
+<symbol id="i-cat-rank" data-g="cat" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>排序与取舍</title>
+  <path d="M3.6 7.4h13.2" stroke="url(#ga)" stroke-width="2"/>
+  <path d="M3.6 12h9.2" stroke="url(#ga)" stroke-width="2"/>
+  <path d="M3.6 16.6h5.2" stroke="url(#gb)" stroke-width="2"/>
+  <path d="M18.4 5.6v12.8" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+  <path d="M16.2 16.2l2.2 2.2 2.2-2.2" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+</symbol>
+
+<symbol id="i-cat-decide" data-g="cat" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>决策与判断</title>
+  <path d="M12 20.4v-6.6" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M12 13.8L6.4 8.2" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M12 13.8l5.6-5.6" stroke="url(#gb)" stroke-width="1.75"/>
+  <circle cx="6.4" cy="7" r="1.7" fill="url(#ga)" stroke="none"/>
+  <circle cx="17.6" cy="7" r="1.7" fill="url(#gb)" stroke="none"/>
+</symbol>
+
+<symbol id="i-cat-root" data-g="cat" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>问题与根因</title>
+  <path d="M12 4.6v6.8" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M12 11.4L7.6 16.4M12 11.4l4.4 5M12 11.4v6.4" stroke="url(#ga)" stroke-width="1.6"/>
+  <path d="M5.2 19.8h13.6" stroke="currentColor" stroke-width="1.5" opacity=".42"/>
+</symbol>
+
+<symbol id="i-cat-exec" data-g="cat" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>执行与节奏</title>
+  <path d="M3.4 12.4h3.4l2-5 3.2 10 2.2-5h6.4" stroke="url(#ga)" stroke-width="1.75"/>
+</symbol>
+
+<symbol id="i-cat-emo" data-g="cat" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>情绪与内耗</title>
+  <path d="M12 19.8C6.6 16.3 4.2 13.5 4.2 10.7 4.2 8.3 6 6.6 8.1 6.6c1.6 0 3 .8 3.9 2.1.9-1.3 2.3-2.1 3.9-2.1 2.1 0 3.9 1.7 3.9 4.1 0 2.8-2.4 5.6-7.8 9.1z" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M8.4 11.6c.9 1.9 2.1 3 3.6 3" stroke="url(#gb)" stroke-width="1.4" opacity=".8"/>
+</symbol>
+
+<symbol id="i-cat-talk" data-g="cat" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>表达与沟通</title>
+  <path d="M20.4 12.2c0 3.6-3.7 6.5-8.4 6.5-1 0-2-.16-2.9-.44L5 20.6l1.3-3.4A6.3 6.3 0 0 1 3.6 12.2C3.6 8.6 7.3 5.7 12 5.7s8.4 2.9 8.4 6.5z" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M8.6 11.4h6.8M8.6 14.2h4.4" stroke="url(#gb)" stroke-width="1.5"/>
+</symbol>
+
+<symbol id="i-cat-habit" data-g="cat" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>习惯与养成</title>
+  <path d="M4.6 12a7.4 7.4 0 0 1 12.6-5.2" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M17.6 3.6v3.4h-3.4" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M19.4 12a7.4 7.4 0 0 1-12.6 5.2" stroke="url(#gb)" stroke-width="1.75"/>
+  <path d="M6.4 20.4V17h3.4" stroke="url(#gb)" stroke-width="1.75"/>
+</symbol>
+
+<symbol id="i-cat-learn" data-g="cat" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>学习与创意</title>
+  <path d="M12 3.4a5.6 5.6 0 0 1 3.4 10c-.5.4-.8 1-.8 1.6v.6H9.4v-.6c0-.6-.3-1.2-.8-1.6A5.6 5.6 0 0 1 12 3.4z" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M9.9 18h4.2M10.6 20.6h2.8" stroke="currentColor" stroke-width="1.5" opacity=".45"/>
+</symbol>
+
+<!-- ============ 通用操作 ============ -->
+<symbol id="i-plus" data-g="act" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>新增</title>
+  <path d="M12 5.4v13.2M5.4 12h13.2" stroke="url(#ga)" stroke-width="1.9"/>
+</symbol>
+
+<symbol id="i-trash" data-g="act" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>删除</title>
+  <path d="M4.4 6.6h15.2" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M9.6 6.6V4.4h4.8v2.2" stroke="currentColor" stroke-width="1.5" opacity=".45"/>
+  <path d="M6.4 6.6l.9 12.3c.05.8.7 1.4 1.5 1.4h6.4c.8 0 1.45-.6 1.5-1.4l.9-12.3" stroke="url(#gb)" stroke-width="1.6"/>
+  <path d="M10.4 10.4v6M13.6 10.4v6" stroke="currentColor" stroke-width="1.4" opacity=".4"/>
+</symbol>
+
+<symbol id="i-drag" data-g="act" viewBox="0 0 24 24" fill="none">
+  <title>拖动把手</title>
+  <g fill="currentColor" opacity=".5">
+    <circle cx="9" cy="7" r="1.4"/><circle cx="15" cy="7" r="1.4"/>
+    <circle cx="9" cy="12" r="1.4"/><circle cx="15" cy="12" r="1.4"/>
+    <circle cx="9" cy="17" r="1.4"/><circle cx="15" cy="17" r="1.4"/>
+  </g>
+</symbol>
+
+<symbol id="i-check" data-g="act" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>完成</title>
+  <path d="M5 12.7l4.8 4.7L19 6.4" stroke="url(#ga)" stroke-width="2"/>
+</symbol>
+
+<symbol id="i-copy" data-g="act" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>复制</title>
+  <rect x="8.6" y="8.6" width="11.4" height="11.4" rx="2.6" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M15.6 8.6V5.8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.6a2 2 0 0 0 2 2h2.8" stroke="url(#gb)" stroke-width="1.6"/>
+</symbol>
+
+<symbol id="i-download" data-g="act" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>导出</title>
+  <path d="M12 3.8v10.6" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M7.7 10.6L12 14.9l4.3-4.3" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M4.4 18.8h15.2" stroke="url(#gb)" stroke-width="1.75"/>
+</symbol>
+
+<symbol id="i-upload" data-g="act" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>导入</title>
+  <path d="M12 14.6V4" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M7.7 8.3L12 4l4.3 4.3" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M4.4 18.8h15.2" stroke="url(#gb)" stroke-width="1.75"/>
+</symbol>
+
+<symbol id="i-chevron" data-g="act" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>展开 / 收起</title>
+  <path d="M7 9.8l5 5 5-5" stroke="url(#ga)" stroke-width="1.9"/>
+</symbol>
+
+<symbol id="i-expand" data-g="act" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>全屏展开</title>
+  <path d="M4 9.2V4h5.2M20 9.2V4h-5.2M4 14.8V20h5.2M20 14.8V20h-5.2" stroke="url(#ga)" stroke-width="1.75"/>
+</symbol>
+
+<symbol id="i-flag" data-g="act" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>交付标准</title>
+  <path d="M6.4 20.6V3.8" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M6.4 4.6h10.4l-2.3 3.4 2.3 3.4H6.4z" stroke="url(#gb)" stroke-width="1.6"/>
+</symbol>
+
+<symbol id="i-timer" data-g="act" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>时限</title>
+  <path d="M7 4h10M7 20h10" stroke="url(#ga)" stroke-width="1.9"/>
+  <path d="M8.6 4c0 3.6 3.4 4.6 3.4 8s-3.4 4.4-3.4 8" stroke="url(#ga)" stroke-width="1.6"/>
+  <path d="M15.4 4c0 3.6-3.4 4.6-3.4 8s3.4 4.4 3.4 8" stroke="url(#gb)" stroke-width="1.6"/>
+</symbol>
+
+<symbol id="i-spark" data-g="act" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>还有别的选法</title>
+  <path d="M12 3.6c0 4.4-2.4 6.8-6.8 6.8C9.6 10.4 12 12.8 12 17.2c0-4.4 2.4-6.8 6.8-6.8C14.4 10.4 12 8 12 3.6z" stroke="url(#ga)" stroke-width="1.6"/>
+  <path d="M18.6 3.2l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z" stroke="url(#gb)" stroke-width="1.1"/>
+</symbol>
+
+<!-- ============ 状态与提示 ============ -->
+<symbol id="i-warn" data-g="state" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>提醒 / 超载</title>
+  <path d="M12 4.4L21 19.6H3z" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M12 9.8v4.2" stroke="url(#gb)" stroke-width="1.9"/>
+  <circle cx="12" cy="16.9" r="1" fill="url(#gb)" stroke="none"/>
+</symbol>
+
+<symbol id="i-info" data-g="state" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>说明</title>
+  <circle cx="12" cy="12" r="8.2" stroke="url(#ga)" stroke-width="1.6"/>
+  <path d="M12 11.2v5.4" stroke="url(#gb)" stroke-width="1.9"/>
+  <circle cx="12" cy="8.2" r="1" fill="url(#gb)" stroke="none"/>
+</symbol>
+
+<symbol id="i-ok" data-g="state" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>已达标</title>
+  <circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.5" opacity=".4"/>
+  <path d="M8.4 12.3l2.6 2.6 4.8-5.3" stroke="url(#ga)" stroke-width="1.9"/>
+</symbol>
+
+<symbol id="i-lock" data-g="state" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>未解锁</title>
+  <rect x="5.4" y="10.4" width="13.2" height="9.2" rx="2.6" stroke="url(#ga)" stroke-width="1.75"/>
+  <path d="M8.4 10.4V7.8a3.6 3.6 0 0 1 7.2 0v2.6" stroke="currentColor" stroke-width="1.5" opacity=".45"/>
+</symbol>
+
+<!-- ============ 插画 ============ -->
+<symbol id="a-amp" data-g="art" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>放大器 · 品牌徽标</title>
+  <circle cx="96" cy="70" r="54" fill="url(#gLs)" stroke="none"/>
+  <circle cx="86" cy="64" r="31" stroke="url(#gL)" stroke-width="4.5"/>
+  <path d="M107 85l26 26" stroke="url(#gL)" stroke-width="9"/>
+  <path d="M72 76l14-19 14 19" stroke="url(#gL2)" stroke-width="4"/>
+  <path d="M86 57v19" stroke="url(#gL2)" stroke-width="4"/>
+  <path d="M40 34l2.2 6 6 2.2-6 2.2-2.2 6-2.2-6-6-2.2 6-2.2z" stroke="url(#gL2)" stroke-width="2"/>
+  <path d="M156 40l1.8 5 5 1.8-5 1.8-1.8 5-1.8-5-5-1.8 5-1.8z" stroke="url(#gL)" stroke-width="2"/>
+</symbol>
+
+<symbol id="a-step1" data-g="art" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>逐层拆解 · 积木塔</title>
+  <circle cx="100" cy="70" r="62" fill="url(#gLs)" stroke="none"/>
+  <rect x="38" y="106" width="124" height="19" rx="7" fill="url(#gLf)" stroke="url(#gL)" stroke-width="2.4"/>
+  <rect x="48" y="84" width="104" height="19" rx="7" fill="url(#gLf)" stroke="url(#gL)" stroke-width="2.4"/>
+  <rect x="58" y="62" width="84" height="19" rx="7" fill="url(#gLf)" stroke="url(#gL2)" stroke-width="2.4"/>
+  <rect x="68" y="40" width="64" height="19" rx="7" stroke="currentColor" stroke-width="2.2" opacity=".5" stroke-dasharray="6 5"/>
+  <rect x="78" y="18" width="44" height="19" rx="7" stroke="currentColor" stroke-width="2.2" opacity=".34" stroke-dasharray="6 5"/>
+  <circle cx="100" cy="10" r="2.6" fill="url(#gL)" stroke="none"/>
+</symbol>
+
+<symbol id="a-step2" data-g="art" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>优先级 · 拖进象限</title>
+  <circle cx="100" cy="70" r="62" fill="url(#gLs)" stroke="none"/>
+  <rect x="28" y="18" width="144" height="104" rx="12" stroke="currentColor" stroke-width="2" opacity=".38"/>
+  <path d="M100 22v96M32 70h136" stroke="url(#gL)" stroke-width="2.2" opacity=".7"/>
+  <circle cx="100" cy="70" r="5" fill="var(--bgbase,#f1f4fc)" stroke="url(#gL)" stroke-width="2.2"/>
+  <rect x="42" y="32" width="46" height="20" rx="7" fill="url(#gLf)" stroke="url(#gL)" stroke-width="2.2"/>
+  <rect x="120" y="88" width="42" height="20" rx="7" fill="url(#gLf)" stroke="url(#gL2)" stroke-width="2.2" opacity=".8"/>
+  <rect x="112" y="44" width="52" height="26" rx="8" fill="url(#gLf)" stroke="url(#gL)" stroke-width="2.6"/>
+  <path d="M92 60c8-6 10-14 18-16" stroke="url(#gL2)" stroke-width="2.2" stroke-dasharray="5 4"/>
+  <path d="M104 46l6 2 2-6" stroke="url(#gL2)" stroke-width="2.2" stroke-dasharray="5 4"/>
+</symbol>
+
+<symbol id="a-step3" data-g="art" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>今日时间块 · 时间轴</title>
+  <circle cx="100" cy="70" r="62" fill="url(#gLs)" stroke="none"/>
+  <path d="M20 96h160" stroke="url(#gL)" stroke-width="2.6"/>
+  <path d="M20 90v12M60 92v8M100 90v12M140 92v8M180 90v12" stroke="currentColor" stroke-width="2" opacity=".42"/>
+  <rect x="24" y="60" width="56" height="32" rx="9" fill="url(#gLf)" stroke="url(#gL)" stroke-width="2.4"/>
+  <rect x="88" y="60" width="40" height="32" rx="9" fill="url(#gLf)" stroke="url(#gL2)" stroke-width="2.4"/>
+  <rect x="136" y="60" width="26" height="32" rx="9" stroke="currentColor" stroke-width="2.2" opacity=".45" stroke-dasharray="6 5"/>
+  <circle cx="168" cy="34" r="15" stroke="url(#gL)" stroke-width="2.4"/>
+  <path d="M168 26v9l6 4" stroke="url(#gL2)" stroke-width="2.2"/>
+</symbol>
+
+<symbol id="a-empty-goals" data-g="art" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>空状态 · 还没有拆解卡</title>
+  <rect x="62" y="30" width="76" height="80" rx="12" stroke="currentColor" stroke-width="2.2" opacity=".38" stroke-dasharray="7 6"/>
+  <rect x="20" y="96" width="36" height="14" rx="5" fill="url(#gLf)" stroke="url(#gL)" stroke-width="2" opacity=".55"/>
+  <rect x="146" y="88" width="32" height="14" rx="5" fill="url(#gLf)" stroke="url(#gL2)" stroke-width="2" opacity=".45"/>
+  <rect x="34" y="24" width="30" height="14" rx="5" fill="url(#gLf)" stroke="url(#gL2)" stroke-width="2" opacity=".35"/>
+  <path d="M88 70h24M100 58v24" stroke="url(#gL)" stroke-width="3.4"/>
+</symbol>
+
+<symbol id="a-empty-quad" data-g="art" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>空状态 · 象限还空着</title>
+  <rect x="34" y="24" width="118" height="84" rx="12" stroke="currentColor" stroke-width="2" opacity=".34" stroke-dasharray="7 6"/>
+  <path d="M93 28v76M38 68h110" stroke="currentColor" stroke-width="2" opacity=".26" stroke-dasharray="5 5"/>
+  <rect x="46" y="36" width="40" height="24" rx="8" stroke="url(#gL)" stroke-width="2.4" stroke-dasharray="6 5"/>
+  <rect x="132" y="98" width="44" height="22" rx="8" fill="url(#gLf)" stroke="url(#gL)" stroke-width="2.4"/>
+  <path d="M154 96c-14-14-42-8-52-34" stroke="url(#gL2)" stroke-width="2.4" stroke-dasharray="6 5"/>
+  <path d="M96 58l6 8 8-4" stroke="url(#gL2)" stroke-width="2.4" stroke-dasharray="6 5"/>
+</symbol>
+
+<symbol id="a-empty-timeline" data-g="art" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>空状态 · 时间轴还空着</title>
+  <path d="M22 100h156" stroke="currentColor" stroke-width="2.4" opacity=".4" stroke-dasharray="8 6"/>
+  <path d="M22 94v12M70 96v8M118 94v12M166 96v8" stroke="currentColor" stroke-width="2" opacity=".3"/>
+  <rect x="34" y="60" width="52" height="30" rx="9" stroke="url(#gL)" stroke-width="2.4" stroke-dasharray="7 6"/>
+  <rect x="100" y="60" width="38" height="30" rx="9" stroke="url(#gL2)" stroke-width="2.4" stroke-dasharray="7 6"/>
+  <circle cx="164" cy="38" r="16" stroke="url(#gL)" stroke-width="2.4" stroke-dasharray="6 6"/>
+  <path d="M164 30v9l6 4" stroke="url(#gL2)" stroke-width="2"/>
+</symbol>
+</svg>
